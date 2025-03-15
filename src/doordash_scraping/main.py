@@ -86,13 +86,8 @@ async def retrieve_menu_items(instance, start_url: str) -> list[dict]:
                 current_scroll = previous_scroll + await page.evaluate("window.innerHeight")
                 await page.evaluate(f"() => window.scroll(0, {current_scroll})")
                 current_scroll = await page.evaluate("window.scrollY")
-
-                print(previous_scroll)
-                print(current_scroll)
-
                 if(previous_scroll == current_scroll):
                     break
-
                 previous_scroll = current_scroll
 
 
