@@ -66,7 +66,6 @@ async def retrieve_menu_items(instance, start_url: str) -> list[dict]:
             try:
                 await page.wait_for_load_state('networkidle')
                 menu_items = await menu_item_locator.all()
-                print(await menu_item_locator.count())
                 for menu_item in menu_items:
                     item_id = await menu_item.get_attribute("data-item-id")
                     if item_id not in visited:
@@ -89,6 +88,7 @@ async def retrieve_menu_items(instance, start_url: str) -> list[dict]:
                 if(previous_scroll == current_scroll):
                     break
                 previous_scroll = current_scroll
+        await browser.close()
 
 
 async def main():

@@ -1,0 +1,3 @@
+{
+    "prompt" : "Write a script in python using Playwright to perform the following sequence of tasks. Do not wrap the code in a function. Assume that the page has already been initialized in a variable named 'page'.  Only provide the code without further explanations:Action: Navigate to UberEats and close location modal.Subtasks:URL navigation to https://www.ubereats.com/Click on the close button of location access modal.Summary:A modal appears prompting the user to allow location access, but was closed, displaying options for entering a delivery address and searching for food.The HTML of the current page is attached."
+}
